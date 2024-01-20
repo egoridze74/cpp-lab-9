@@ -24,20 +24,23 @@ public:
 
     bool operator()(int elem) const
     {
-        return elem % 2 == 0;
+        return !(elem % 2 == 0);
     }
 };
 
-class HasLetterA : public SampleCondition<std::string>
+class HasLetter : public SampleCondition<std::string>
 {
 public:
-    HasLetterA() {}
+    char letter;
+
+    HasLetter(char l) {letter = l;}
 
     bool operator()(std::string elem) const
     {
         bool k = false;
+        char second_letter = 'a' <= letter && letter <= 'z' ? letter + 'A' - 'a' : letter + 'a' - 'A';
         for (size_t i  = 0; i < elem.size(); ++i)
-            if (elem.find("a") != -1 or elem.find("A") != -1)
+            if (elem.find(letter) != -1 or elem.find(second_letter) != -1)
             {
                 k = true;
                 break;

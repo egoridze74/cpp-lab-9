@@ -22,8 +22,8 @@ int main() {
               << CountMatching(Ints, 5, IsOdd()) << std::endl;
 
     std::string Strings[5] = {"Amazing", "Breakfast", "Contrasting", "Disgusting", "Evening"};
-    std::cout << "Number of strings containing letter a in Strings: "
-              << CountMatching(Strings, 5, HasLetterA()) << std::endl;
+    std::cout << "Number of strings containing chosen letter in Strings: "
+              << CountMatching(Strings, 5, HasLetter('b')) << std::endl;
 
     bool Bools[5] = {true, true, true, false, true};
     std::cout << "Number of false elements in Bools: "
