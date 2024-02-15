@@ -66,8 +66,7 @@ int main() {
     std::cout << "Number of elements bigger than Pi in Doubles: "
               << CountMatching(Doubles, 5, IsBiggerThanPi()) << std::endl;
 
-    std::function<bool(int)> f1 = is_bigger_than_2005;
-
+    std::function<bool(int)> f1= is_bigger_than_2005;
     std::cout << "Using std::function. " << std::endl << "Number of elements bigger than 2005 in Ints: "
               << FuncCountMatching(Ints, 5, f1) << std::endl;
 
